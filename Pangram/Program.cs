@@ -13,11 +13,10 @@ namespace Pangram
             /* Enter your code here. Read input from STDIN. Print output to STDOUT */
             //"Wepromptlyjudgedantiqueivorybucklesforthenextprize";
             
-            string alphabet = "abcdefghijklmnopqrstuvwxyz";        
+            string alphabet = "abcdefghijklmnopqrstuvwxyz";       
 
             string userInput = "Wepromptlyjudgedantiqueivorybucklesforthenextprize";
-            string x = "e";
-            string y = "e";
+          
 
             int count = 0;
             
