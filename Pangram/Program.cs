@@ -16,9 +16,7 @@ namespace Pangram
             string alphabet = "abcdefghijklmnopqrstuvwxyz";       
 
             string userInput = "Wepromptlyjudgedantiqueivorybucklesforthenextprize";
-          
-
-            int count = 0;
+                      
             
             Console.WriteLine(userInput);
                       
@@ -26,18 +24,19 @@ namespace Pangram
                 {                   
                     foreach (var item2 in alphabet)
                     {
+                    alphabet.ToCharArray();
                         if (item != item2)
                         {
                         continue;
                         }
                          else
-                        {                        
-                        
+                         {
+                        //alphabet.Remove(item2);                  
                         break;
-                        }                    
+                          }                    
                     }
                 }
-            if (count >= 26)
+            if (alphabet.Count()==0)
             {
                 Console.WriteLine("This is paragms");
             }
