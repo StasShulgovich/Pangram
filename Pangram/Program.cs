@@ -11,41 +11,52 @@ namespace Pangram
         static void Main(string[] args)
         {
             /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-            //"Wepromptlyjudgedantiqueivorybucklesforthenextprize";
-            
-            string alphabet = "abcdefghijklmnopqrstuvwxyz";       
+            //"wepromptlyjudgedantiqueivorybucklesforthenextprie";
 
-            string userInput = "Wepromptlyjudgedantiqueivorybucklesforthenextprize";
-                      
-            
-            Console.WriteLine(userInput);
-                      
-                foreach (var item in userInput)
-                {                   
-                    foreach (var item2 in alphabet)
+            string MyString = Console.ReadLine();
+
+            char[] MyChar = { ' ','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+
+            string output = MyString;
+            int count = 0;
+
+            foreach (var item in MyString)
+            {
+                foreach (var item2 in MyChar)
+                {
+                    if (item != item2)
                     {
-                    alphabet.ToCharArray();
-                        if (item != item2)
-                        {
                         continue;
-                        }
-                         else
-                         {
-                        //alphabet.Remove(item2);                  
-                        break;
-                          }                    
+                    }
+                    else
+                    {
+                        output = output.Trim(item2);
+                        count += 1;
+                       
                     }
                 }
-            if (alphabet.Count()==0)
+            }
+            if (output == String.Empty && count > 25)
             {
-                Console.WriteLine("This is paragms");
+                Console.WriteLine("This is params");
             }
             else
             {
-                Console.WriteLine("No");
+                Console.WriteLine("No params");
             }
-                              
-                
+
+
+
+
+            //if (alphabet.Count() == 0)
+            //{
+            //    Console.WriteLine("This is paragms");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No");
+            //}
+
 
 
             Console.ReadLine();
