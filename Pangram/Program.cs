@@ -11,9 +11,10 @@ namespace Pangram
         static void Main(string[] args)
         {
             /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-            //"wepromptlyjudgedantiqueivorybucklesforthenextprize";
+            //"We promptly judge dantique ivory buckles for the next prize";
 
-            string MyString = Console.ReadLine();
+            string iMyString = Console.ReadLine();
+            string MyString = iMyString.ToLower();          
 
             char[] MyChar = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             List<char> list = new List<char>();          
@@ -37,11 +38,11 @@ namespace Pangram
             Console.WriteLine();
             if (distinct.Count == 26)
             {
-                Console.WriteLine("This is paragms");
+                Console.WriteLine("pangram");
             }
             else
             {
-                Console.WriteLine("This is not paragms");
+                Console.WriteLine("not pangram");
             }         
             
             Console.ReadLine();
