@@ -11,14 +11,12 @@ namespace Pangram
         static void Main(string[] args)
         {
             /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-            //"wepromptlyjudgedantiqueivorybucklesforthenextprie";
+            //"wepromptlyjudgedantiqueivorybucklesforthenextprize";
 
             string MyString = Console.ReadLine();
 
-            char[] MyChar = { ' ','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
-
-            string output = MyString;
-            int count = 0;
+            char[] MyChar = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            List<char> list = new List<char>();          
 
             foreach (var item in MyString)
             {
@@ -30,35 +28,22 @@ namespace Pangram
                     }
                     else
                     {
-                        output = output.Trim(item2);
-                        count += 1;
-                       
+                        list.Add(item2);                       
                     }
                 }
             }
-            if (output == String.Empty && count > 25)
+            var distinct = list.Distinct().ToList();
+           
+            Console.WriteLine();
+            if (distinct.Count == 26)
             {
-                Console.WriteLine("This is params");
+                Console.WriteLine("This is paragms");
             }
             else
             {
-                Console.WriteLine("No params");
-            }
-
-
-
-
-            //if (alphabet.Count() == 0)
-            //{
-            //    Console.WriteLine("This is paragms");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("No");
-            //}
-
-
-
+                Console.WriteLine("This is not paragms");
+            }         
+            
             Console.ReadLine();
         }
     }
