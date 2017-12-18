@@ -13,13 +13,14 @@ namespace Pangram
             /* Enter your code here. Read input from STDIN. Print output to STDOUT */
             //"We promptly judge dantique ivory buckles for the next prize";
 
-            string iMyString = Console.ReadLine();
-            string MyString = iMyString.ToLower();          
+            string input = Console.ReadLine();
+            string myString = input.ToLower();          
 
-            char[] MyChar = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+            char[] MyChar = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
             List<char> list = new List<char>();          
 
-            foreach (var item in MyString)
+            foreach (var item in myString)
             {
                 foreach (var item2 in MyChar)
                 {
@@ -33,18 +34,10 @@ namespace Pangram
                     }
                 }
             }
-            var distinct = list.Distinct().ToList();
-           
-            Console.WriteLine();
-            if (distinct.Count == 26)
-            {
-                Console.WriteLine("pangram");
-            }
-            else
-            {
-                Console.WriteLine("not pangram");
-            }         
+            var distinct = list.Distinct().ToList();         
             
+            string result = (distinct.Count == 26) ? "pangram" : "not pangram";
+            Console.WriteLine(result);
             Console.ReadLine();
         }
     }
